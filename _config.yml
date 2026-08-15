@@ -2,12 +2,11 @@
 # _config.yml NOT hot-reloaded. Restart w/ `jekyll serve` after edits.
 
 title: Unofficial Windows Documentation
-tagline: Community-written guides for getting more out of Windows.
+tagline: A reference guide for what is and isn't normal.
 description: >-
-  An unofficial, community-maintained collection of guides, references, and
-  tips for Windows — setup, configuration, shortcuts, and troubleshooting.
+  A collection of guides, references, and write-ups for Windows.
 author: Bruno Christensen
-email: iambrunouno@gmail.com
+email: brunojchris@gmail.com
 
 # If deploying to <user>.github.io, baseurl: "/unofficial-windows-documentation"
 # If using a custom domain, set baseurl to "" and url to domain.
