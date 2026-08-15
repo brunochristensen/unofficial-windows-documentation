@@ -1,18 +1,13 @@
 ---
 layout: page
-title: About
+title: "About me"
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This is an unofficial collection of documentation, write-ups, and reference material for
+Windows. I wrote this site because during the course of my blue team work, I kept seeing 
+Windows do wierd stuff, would go investigate to confirm, and then find out it's benign. 
+And I don't want to search through the Microsoft documentation any more than nessesary.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+It is not affiliated with, authorized by, or endorsed by Microsoft. Windows and
+related names are trademarks of Microsoft Corporation. Please don't sue me.

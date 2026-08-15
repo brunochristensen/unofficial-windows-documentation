@@ -1,0 +1,163 @@
+// Article typography — the reading experience inside .content.
+
+.content { font-size: 1rem; }
+
+.content h1, .content h2, .content h3,
+.content h4, .content h5, .content h6 {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+  position: relative;
+}
+.content h2 {
+  margin: 2.5rem 0 1rem;
+  padding-bottom: .3rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.content h3 { margin: 2rem 0 .75rem; font-size: 1.2rem; }
+.content h4 { margin: 1.5rem 0 .5rem; font-size: 1.05rem; }
+
+.content p { margin: 0 0 1.1rem; }
+.content ul, .content ol { margin: 0 0 1.1rem; padding-left: 1.4rem; }
+.content li { margin: .3rem 0; }
+.content li > ul, .content li > ol { margin: .3rem 0; }
+
+// Clickable heading anchors (injected by JS).
+.heading-anchor {
+  position: absolute;
+  left: -1.1rem;
+  padding-right: .4rem;
+  opacity: 0;
+  color: var(--text-muted);
+  font-weight: 400;
+  text-decoration: none;
+}
+.content h2:hover .heading-anchor,
+.content h3:hover .heading-anchor,
+.content h4:hover .heading-anchor { opacity: 1; }
+
+// Inline code
+.content :not(pre) > code {
+  padding: .15em .4em;
+  border-radius: 5px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  font-size: .88em;
+}
+
+// Code blocks
+.content pre {
+  margin: 0 0 1.3rem;
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: .875rem;
+  line-height: 1.55;
+}
+.content pre code { padding: 0; border: 0; background: none; font-size: inherit; }
+.highlight { margin: 0 0 1.3rem; }
+.highlight pre { margin: 0; }
+
+kbd {
+  display: inline-block;
+  padding: .1em .5em;
+  border: 1px solid var(--border-strong);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: var(--bg-subtle);
+  font-size: .82em;
+  line-height: 1.4;
+}
+
+// Tables
+.content table {
+  width: 100%;
+  margin: 0 0 1.3rem;
+  border-collapse: collapse;
+  font-size: .92rem;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  padding: .5rem .75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+.content th { background: var(--bg-subtle); font-weight: 600; }
+
+// Plain blockquotes (citations, etc.)
+.content blockquote {
+  margin: 0 0 1.3rem;
+  padding: .1rem 1.1rem;
+  border-left: 3px solid var(--border-strong);
+  color: var(--text-muted);
+}
+.content blockquote p:last-child { margin-bottom: 0; }
+
+// <details> disclosure
+.content details {
+  margin: 0 0 1.3rem;
+  padding: .4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-subtle);
+}
+.content details[open] { padding-bottom: .75rem; }
+.content summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: .3rem 0;
+}
+.content summary::marker { color: var(--text-muted); }
+
+// ---------------------------------------------------------------------------
+// Callouts (GitHub-style alerts). Base + per-type accent set by JS classes.
+// ---------------------------------------------------------------------------
+.callout {
+  margin: 0 0 1.3rem;
+  padding: .85rem 1rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--callout-color, var(--note));
+  border-radius: var(--radius);
+  background: var(--callout-bg, var(--note-bg));
+  color: var(--text);
+}
+.callout > :last-child { margin-bottom: 0; }
+.callout-title {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  margin: 0 0 .35rem;
+  font-weight: 600;
+  color: var(--callout-color, var(--note));
+}
+.callout-title svg { flex: none; }
+
+.callout-note      { --callout-color: var(--note);      --callout-bg: var(--note-bg); }
+.callout-tip       { --callout-color: var(--tip);       --callout-bg: var(--tip-bg); }
+.callout-important { --callout-color: var(--important); --callout-bg: var(--important-bg); }
+.callout-warning   { --callout-color: var(--warning);   --callout-bg: var(--warning-bg); }
+.callout-caution   { --callout-color: var(--caution);   --callout-bg: var(--caution-bg); }
+
+// ---------------------------------------------------------------------------
+// Prev / next page navigation (rendered when navigation is wired up).
+// ---------------------------------------------------------------------------
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.page-nav a {
+  flex: 1;
+  padding: .85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+.page-nav a:hover { border-color: var(--accent); text-decoration: none; }
+.page-nav .next { text-align: right; }
+.page-nav small { display: block; color: var(--text-muted); font-size: .75rem; }

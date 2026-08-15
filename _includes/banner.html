@@ -1,0 +1,12 @@
+{%- comment -%}
+  Theme-aware page banner. Opt in per page via front matter:  banner: home
+  Expects a single transparent PNG at assets/images/<name>.png. In dark mode a
+  CSS filter recolors it (see .page-banner in _sass/_layout.scss), so you only
+  need one image.
+{%- endcomment -%}
+{%- if page.banner -%}
+<div class="page-banner" aria-hidden="true">
+  <img alt=""
+       src="{{ '/assets/images/' | append: page.banner | append: '.png' | relative_url }}">
+</div>
+{%- endif -%}

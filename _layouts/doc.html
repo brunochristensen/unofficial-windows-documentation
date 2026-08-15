@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="doc-shell">
+
+  {%- comment -%}
+    Left sidebar. Navigation is on hold, so for now this auto-lists the docs
+    collection alphabetically. Swap this block for a real nav later.
+  {%- endcomment -%}
+  <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+    <nav class="sidebar-nav">
+      <p class="sidebar-heading">Documentation</p>
+      <ul class="nav-list">
+        {%- assign docs = site.docs | sort: "title" -%}
+        {%- for d in docs -%}
+          <li>
+            <a class="nav-link{% if d.url == page.url %} is-active{% endif %}"
+               href="{{ d.url | relative_url }}">{{ d.title }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </aside>
+
+  <article class="doc content">
+    {% include banner.html %}
+    <header class="doc-header">
+      <h1 class="doc-title">{{ page.title }}</h1>
+    </header>
+    {{ content }}
+  </article>
+
+  <aside class="toc" id="toc" aria-label="On this page">
+    <div class="toc-inner">
+      <p class="toc-title">On this page</p>
+      <nav id="toc-nav"></nav>
+    </div>
+  </aside>
+
+</div>

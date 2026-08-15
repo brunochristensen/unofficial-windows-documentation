@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{% include banner.html %}
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Unofficial · Community-maintained</p>
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-tagline">{{ site.tagline | default: site.description }}</p>
+    <div class="hero-actions">
+      {%- assign first = site.docs | sort: "title" | first -%}
+      {%- if first -%}
+        <a class="btn btn-primary" href="{{ first.url | relative_url }}">Get started →</a>
+      {%- endif -%}
+      {%- if site.github_username -%}
+        <a class="btn btn-ghost" href="https://github.com/{{ site.github_username }}">View on GitHub</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+<section class="cards-section">
+  <h2 class="section-title">Browse the docs</h2>
+  <div class="card-grid">
+    {%- assign docs = site.docs | sort: "title" -%}
+    {%- for d in docs -%}
+      <a class="card" href="{{ d.url | relative_url }}">
+        <h3 class="card-title">{{ d.title }}</h3>
+        {%- if d.description -%}<p class="card-desc">{{ d.description }}</p>{%- endif -%}
+        <span class="card-more">Read →</span>
+      </a>
+    {%- endfor -%}
+  </div>
+
+  {{ content }}
+</section>

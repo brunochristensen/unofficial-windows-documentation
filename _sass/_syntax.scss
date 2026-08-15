@@ -1,0 +1,40 @@
+// Rouge syntax highlighting — a compact theme that reads from the CSS tokens
+// so it flips with light/dark automatically.
+
+:root {
+  --hl-comment: #6e7781;
+  --hl-keyword: #cf222e;
+  --hl-string: #0a3069;
+  --hl-number: #0550ae;
+  --hl-name: #953800;
+  --hl-tag: #116329;
+  --hl-func: #8250df;
+}
+@mixin hl-dark {
+  --hl-comment: #8b949e;
+  --hl-keyword: #ff7b72;
+  --hl-string: #a5d6ff;
+  --hl-number: #79c0ff;
+  --hl-name: #ffa657;
+  --hl-tag: #7ee787;
+  --hl-func: #d2a8ff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { @include hl-dark; }
+}
+:root[data-theme="dark"] { @include hl-dark; }
+
+.highlight {
+  .c, .cm, .c1, .cs, .cd { color: var(--hl-comment); font-style: italic; }
+  .k, .kd, .kn, .kp, .kr, .kt, .kc { color: var(--hl-keyword); }
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .dl { color: var(--hl-string); }
+  .m, .mi, .mf, .mh, .mo, .mb, .il { color: var(--hl-number); }
+  .n, .na, .nv, .vi, .vg, .vc { color: inherit; }
+  .nb, .bp, .nc, .no, .nl { color: var(--hl-name); }
+  .nt { color: var(--hl-tag); }
+  .nf, .fm { color: var(--hl-func); }
+  .o, .ow, .p { color: inherit; }
+  .err { color: var(--caution); }
+  .gi { color: var(--tip); background: var(--tip-bg); }
+  .gd { color: var(--caution); background: var(--caution-bg); }
+}
