@@ -11,7 +11,7 @@ email: brunojchris@gmail.com
 # If deploying to <user>.github.io, baseurl: "/unofficial-windows-documentation"
 # If using a custom domain, set baseurl to "" and url to domain.
 baseurl: ""
-url: "brunochristensen.net"
+url: "https://brunochristensen.net"
 
 github_username: brunochristensen
 
