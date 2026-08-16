@@ -3,16 +3,16 @@ title: "Services"
 description: "How Windows services, services.msc, and the MMC console fit together."
 ---
 
-The four jobs of an operating system are process, memory, file and I/O management. Services exist as background processes to facilitate more advanced functionality pertaining to these four jobs. Services will implement behavior for functionality like networking functionality, handling API interactions, hosting third-party components and software, etc. Windows will start these processes as a part of its normal start-up routine, and they exist outside of a user context, meaning they don't require a user to start them, and often execute with the highest level of privileged access to the operating system.
+The four jobs of an operating system are process, memory, file and I/O management. Services exist as background processes to facilitate more advanced functionality pertaining to these four jobs. Services will implement behavior for functionality like networking, handling API interactions, hosting third-party components and software, etc. Windows will start these processes as a part of its normal start-up routine, and they exist outside of a user's account context, instead running under a service account (LocalSystem, LocalService, NetworkService, or a named third-party account). This means they don't require a user to start them, and often execute with privileged access to the operating system.
 
 ## services.msc
 
-Running "Services" from the start menu will actually runs `C:\Windows\System32\services.msc`, This is distinct from `C:\Windows\System32\services.exe`, a.k.a. the Service Control Manager (SCM), which we will get to further down this page.
+Running "Services" from the start menu actually runs `C:\Windows\System32\services.msc`. This is distinct from `C:\Windows\System32\services.exe`, a.k.a. the Service Control Manager (SCM), which we will get to further down this page.
 
 > [!NOTE]
 > It's `services.exe`. `service.exe` is bad, and you should probably remove it.
 
-The .msc extension stands for Microsoft Saved Console. The .msc file type, starting with Windows Vista, is actually XML, and you can open them with notepad in `C:\Windows\System32\` if you want to take a look. The XML defines a console GUI that then can be used to manage underlying Windows system and functionality. In this case, the `services.msc` file contains the configuration for the console window you see. `services.msc`, allows a user to stop, start, and otherwise change the process state of registered services, as well as manipulate some more advanced settings like when a service first starts, what to do if a service crashes, and what permission as service has when it runs. Because these are not binaries or shellcode, .msc files need to ride on another program called `C:\Windows\System32\mcc.exe`.
+The .msc extension stands for Microsoft Saved Console. The .msc file type is actually XML starting with Windows Vista. You can open them with notepad in `C:\Windows\System32\` if you want to take a look. Prior to Windows Vista, .msc files used OLE compound storage, which I won't be getting into in this section. The XML defines a console GUI that then can be used to manage underlying Windows subsystems and functionality. In this case, the `services.msc` file contains the configuration for the console window you see when it's "executed". `services.msc` allows a user to stop, start, and otherwise change the process state of registered services, as well as manipulate some more advanced settings like when a service first starts, what to do if a service crashes, and what permissions a service has when it runs. Because these are data files and not binaries, .msc files need to ride on another program called `C:\Windows\System32\mmc.exe`.
 
 > MMC also enables you to customize the console. By picking and choosing specific snap-ins, you can create management consoles that include only the administrative tools that you need. For example, you can add tools to manage your local computer and remote computers.
 >
@@ -41,18 +41,18 @@ Here is a top-level look at `services.msc`:
 </MMC_ConsoleFile>
 ```
 
-Most of this information is related to the visual appearance of the console pane. But there are two element that I find interesting: `<ConsoleFileID>`, `<ScopeTree>`, and `<BinaryStorage>`. You can explore your own .msc files in C:\Window\System32. In order to better explore how these file are used, we should look at `mmc.exe`.
+Most of this information is related to the visual appearance of the console pane. But there are three elements that I find interesting: `<ConsoleFileID>`, `<BinaryStorage>`, and `<ScopeTree>`. You can explore your own .msc files in `C:\Windows\System32`. In order to better explore how these files are used, we should look at `mmc.exe`.
 
 ## mmc.exe
 
-I decompiled mmc.exe in Ghidra to better explore the behavior of `mmc.exe`, and how it relates to .msc files. The `<ConsoleFileID>` GUID is only refenced once in the `mmc.exe` binary, and not in the registry, or anywhere else I can find. It appears to be stamped into the .msc/.xml file upon creation. Below is the code snippet in which "ConsoleFileID" is referenced. Everytime an .msc file is created, it will be stamped with a new guid.
+I decompiled `mmc.exe` in Ghidra to better explore its behavior, and how it relates to .msc files. The `<ConsoleFileID>` GUID is only referenced once in the `mmc.exe` binary, and not in the registry, or anywhere else I can find. It appears to be stamped into the .msc/.xml file upon creation. Below is the code snippet in which `<ConsoleFileID>` is referenced.
 
-```C++
+```cpp
   GUID guidConsoleFileId;
   ...
-  if (pPersistor[0x18] == (SC)0x0) { #This is either checking that the data stream is in a valid state, or write permission are present.
+  if (pPersistor[0x18] == (SC)0x0) { //This is either checking that the data stream is in a valid state, or write permissions are present.
 	...
-    guidConsoleFileId.Data1 = 0; #GUID struct being initialized
+    guidConsoleFileId.Data1 = 0; //GUID struct being initialized
     guidConsoleFileId.Data2 = 0;
     guidConsoleFileId.Data3 = 0;
     guidConsoleFileId.Data4[0] = '\0';
@@ -63,13 +63,13 @@ I decompiled mmc.exe in Ghidra to better explore the behavior of `mmc.exe`, and 
     guidConsoleFileId.Data4[5] = '\0';
     guidConsoleFileId.Data4[6] = '\0';
     guidConsoleFileId.Data4[7] = '\0';
-    HVar3 = CoCreateGuid(&guidConsoleFileId); # Creates GUID from combaseapi.h
-    mmcerror::SC::operator=(sc,HVar3); # Verifies the GUID is valid
+    HVar3 = CoCreateGuid(&guidConsoleFileId); //Creates GUID from combaseapi.h
+    mmcerror::SC::operator=(sc,HVar3); //Verifies the GUID is valid
     bVar2 = mmcerror::SC::operator_bool(sc);
     if (bVar2) {
       mmcerror::SC::Throw(sc);
     }
-    CPersistor_EnterChildElement # Writes the new GUID
+    CPersistor_EnterChildElement //Writes the new GUID
               (&xmlConsoleFileIdElem,(longlong *)pPersistor,(longlong **)L"ConsoleFileID",
                (wchar_t *)0x0);
     persistValueType = (wchar_t *)CONCAT44(persistValueType._4_4_,0xc);
@@ -79,11 +79,11 @@ I decompiled mmc.exe in Ghidra to better explore the behavior of `mmc.exe`, and 
   }
 ```
 
-At the very end of the file is a `<BinaryStorage>` attribute. The zero-based index of the sub elements is referenced with the `BinaryRefIndex=` attribute seen within other xml elements, namely `<ScopeTree>` (I'll come back to `<ScopeTree>` in a second, I promise).
+At the very end of the file is a `<BinaryStorage>` element. The zero-based index of the child elements is referenced with the `BinaryRefIndex=` attribute seen within other xml elements, namely `<ScopeTree>`.
 
-### <BinaryStorage>
+### `<BinaryStorage>`
 
-```XML
+```xml
   <BinaryStorage>
 	<Binary Name="CONSOLE_FILE_ICON_LARGE">
     <Binary Name="CONSOLE_FILE_ICON_SMALL">
@@ -98,9 +98,12 @@ At the very end of the file is a `<BinaryStorage>` attribute. The zero-based ind
   </BinaryStorage>
 ```
 
-`mmc.exe` decodes this using the function ScDecodeBinary. I have a Python script that will reverse this at github.com/brunochristensen/msc-binary-decode.
+`mmc.exe` decodes this using the function `ScDecodeBinary`. I have a Python script that will reverse this at github.com/brunochristensen/msc-binary-decode. The full decompiled function is hidden below.
 
-```C++
+<details markdown="1">
+
+<summary>Full Code:</summary>
+```cpp
 SC * ScDecodeBinary(SC *pscRet,longlong *pstrBase64Text,undefined8 *pXmlBinaryOut)
 {
   ulonglong uVar1;
@@ -265,15 +268,27 @@ SC * ScDecodeBinary(SC *pscRet,longlong *pstrBase64Text,undefined8 *pXmlBinaryOu
   return pscRet;
 }
 ```
+</details>
 
-Most of the data in `<BinaryStorage>` is icons for the management console. Additionally, there is state data about the console itelf.
+Most of the data in `<BinaryStorage>` is icons for the management console. Additionally, there is state data about the console itself. Below is a sample of two of the icons. The other 4 image icons are duplicates of varying sizes and in different states, like the file icon being propped open. 
 
 ![00_CONSOLE_FILE_ICON_LARGE](/assets/images/services/management/00_CONSOLE_FILE_ICON_LARGE.bmp)
+
 ![05_imagelist](/assets/images/services/management/05_imagelist.bmp)
 
-### <ScopeTree>
+Indices 4 and 7 in `<BinaryStorage>` are state data:
 
-```XML
+```
+10 27 00 00 04 00 00 00 01 00 00 00 02 00 00 00 00 00
+```
+
+```
+01 00 00 00 14 00 00 00 00 00 00 00 04 00 00 00 ff ff ff ff
+```
+
+### `<ScopeTree>`
+
+```xml
   <ScopeTree>
     <SnapinCache>
       <Snapin CLSID="{58221C66-EA27-11CF-ADCF-00AA00A80033}" AllExtensionsEnabled="true"/>
@@ -319,7 +334,9 @@ Most of the data in `<BinaryStorage>` is icons for the management console. Addit
   </ScopeTree>
 ```
 
-Please note the `BinaryRefIndex=` attributes that reference the before mentioned `<Binary>` elements in `<BinaryStorage>`
+Please note the `BinaryRefIndex=` attributes that reference the aforementioned `<Binary>` elements in `<BinaryStorage>`.
+
+Now the interesting part. 
 
 > A snap-in is a tool that is hosted in MMC. MMC offers a common framework in which various snap-ins can run so that you can manage several services by using a single interface.
 >
