@@ -25,7 +25,6 @@ C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_<MajorVer>.<ReleaseYear
 
 ```
 C:\ProgramData\Microsoft\NetFramework\BreadcrumbStore
-C:\Users\<User>\AppData\Local
 C:\Users\<User>\AppData\Local\AMD\DxCache
 C:\Users\<User>\AppData\Local\assembly\tmp
 C:\Users\<User>\AppData\Local\assembly\tmp\<Directory> ([A-Z0-9]{8})
@@ -126,7 +125,6 @@ C:\Users\<User>\AppData\Local\speech\Microsoft
 C:\Users\<User>\AppData\Local\speech\Microsoft\Speech
 C:\Users\<User>\AppData\Local\speech\Microsoft\Speech\Files
 C:\Users\<User>\AppData\Local\speech\Microsoft\Speech\Files\UserLexicons
-C:\Users\<User>\AppData\Local\Temp
 C:\Users\<User>\AppData\Local\Temp\<OfficeTemp>.0 ([A-Za-z]+)
 C:\Users\<User>\AppData\Local\Temp\OICE_<OiceTemp> ([0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\.[0-9])
 C:\Users\<User>\AppData\Local\Temp\AddinExpress
@@ -145,7 +143,6 @@ C:\Users\<User>\AppData\Local\Temp\Outlook Logging
 C:\Users\<User>\AppData\Local\Temp\outlook logging
 C:\Users\<User>\AppData\Local\Temp\PhotoCache\<PhotoCacheID> ([a-z0-9]{44})
 C:\Users\<User>\AppData\Local\Temp\ZCOLogs
-C:\Users\<User>\AppData\LocalLow
 C:\Users\<User>\AppData\LocalLow\Intel\ShaderCache
 C:\Users\<User>\AppData\LocalLow\Microsoft
 C:\Users\<User>\AppData\LocalLow\Microsoft\CryptnetFlushCache\MetaData
@@ -153,7 +150,6 @@ C:\Users\<User>\AppData\LocalLow\Microsoft\CryptnetUrlCache
 C:\Users\<User>\AppData\LocalLow\Microsoft\CryptnetUrlCache\Content
 C:\Users\<User>\AppData\LocalLow\Microsoft\CryptnetUrlCache\MetaData
 C:\Users\<User>\AppData\LocalLow\Temp\Microsoft\OPC
-C:\Users\<User>\AppData\Roaming
 C:\Users\<User>\AppData\Roaming\Identities
 C:\Users\<User>\AppData\Roaming\Microsoft
 C:\Users\<User>\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch
