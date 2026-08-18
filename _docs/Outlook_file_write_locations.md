@@ -1,3 +1,7 @@
+This is some baselined behavior for Outlook and Outlook Classic. There are some oddities included, 
+like duplicate Microsoft Office installations, as well as AMD, NVIDIA, and Intel drivers, and some office integrations.
+These are system dependent and will vary between hosts.
+
 ## Known process executable locations
 
 ```
@@ -14,6 +18,7 @@ C:\Program Files (x86)\Microsoft Office\Office16\OUTLOOK.EXE
 C:\Program Files\Microsoft Office\Office14\OUTLOOK.EXE
 C:\Program Files\Microsoft Office\Root\Office16\OUTLOOK.EXE
 C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_<MajorVer>.<ReleaseYear>.<Build>.<Revision>_<Arch>__8wekyb3d8bbwe\olk.exe
 ```
 
 ## Known file write locations
