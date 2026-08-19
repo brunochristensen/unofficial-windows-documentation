@@ -18,7 +18,72 @@ C:\Program Files (x86)\Microsoft Office\Office16\OUTLOOK.EXE
 C:\Program Files\Microsoft Office\Office14\OUTLOOK.EXE
 C:\Program Files\Microsoft Office\Root\Office16\OUTLOOK.EXE
 C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE
-C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_<MajorVer>.<ReleaseYear>.<Build>.<Revision>_<Arch>__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.Office.Desktop.Outlook_16051.19127.20402.0_x86__8wekyb3d8bbwe\Office16\OUTLOOK.EXE
+C:\Program Files\WindowsApps\Microsoft.Office.Desktop.Outlook_16051.19127.20570.0_x86__8wekyb3d8bbwe\Office16\OUTLOOK.EXE
+C:\Program Files\WindowsApps\Microsoft.Office.Desktop.Outlook_16051.19127.20622.0_x86__8wekyb3d8bbwe\Office16\OUTLOOK.EXE
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.0.0.0_neutral__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2024.1023.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2024.111.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2024.1115.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2024.1216.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2024.708.200_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.1007.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.1017.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.1104.200_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.1111.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.1121.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.1208.200_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.1209.500_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.1218.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.129.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.205.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.219.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.304.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.319.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.416.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.430.200_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.506.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.516.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.617.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.702.0_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.702.500_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.716.500_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.806.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.916.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.930.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.105.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.114.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.120.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.203.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.210.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.213.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.225.0_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.225.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.303.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.310.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.317.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.325.600_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.403.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.407.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.420.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.421.500_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.428.200_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.504.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.512.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.520.0_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.520.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.521.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.602.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.609.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.617.600_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.623.400_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.630.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.707.300_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.713.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.720.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.728.0_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.728.100_x64__8wekyb3d8bbwe\olk.exe
+C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2026.730.100_x64__8wekyb3d8bbwe\olk.exe
 ```
 
 ## Known file write locations
