@@ -1,4 +1,4 @@
-This is some baselined behavior for Outlook and Outlook Classic. There are some oddities included, like duplicate Microsoft Office installations, as well as AMD, NVIDIA, and Intel drivers, and some office integrations. These are system dependent and will vary between hosts. Listed locations are not exhaustive. This information was collected in a live environment.
+This is some baselined behavior for Microsoft Word. There are some oddities included, like duplicate Microsoft Office installations, as well as AMD, NVIDIA, and Intel drivers, and some office integrations. These are system dependent and will vary between hosts. Listed locations are not exhaustive. This information was collected in a live environment.
 
 ## Known process executable locations
 
