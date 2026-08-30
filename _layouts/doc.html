@@ -4,14 +4,21 @@ layout: default
 <div class="doc-shell">
 
   {%- comment -%}
-    Left sidebar. Navigation is on hold, so for now this auto-lists the docs
+    Left sidebar. Navigation is on hold, so for now this auto-lists the current
     collection alphabetically. Swap this block for a real nav later.
   {%- endcomment -%}
-  <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+  {%- if page.collection == "writeups" -%}
+    {%- assign siblings = site.writeups -%}
+    {%- assign sidebar_heading = "Write-ups" -%}
+  {%- else -%}
+    {%- assign siblings = site.docs -%}
+    {%- assign sidebar_heading = "Documentation" -%}
+  {%- endif -%}
+  <aside class="sidebar" id="sidebar" aria-label="{{ sidebar_heading }} navigation">
     <nav class="sidebar-nav">
-      <p class="sidebar-heading">Documentation</p>
+      <p class="sidebar-heading">{{ sidebar_heading }}</p>
       <ul class="nav-list">
-        {%- assign docs = site.docs | sort: "title" -%}
+        {%- assign docs = siblings | sort: "title" -%}
         {%- for d in docs -%}
           <li>
             <a class="nav-link{% if d.url == page.url %} is-active{% endif %}"

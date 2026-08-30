@@ -19,6 +19,7 @@
   margin: 0 auto;
 }
 .brand {
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: .55rem;
@@ -27,7 +28,6 @@
   white-space: nowrap;
 }
 .brand:hover { text-decoration: none; }
-.brand-mark { display: inline-flex; color: var(--accent); }
 .brand-text { font-size: 1rem; }
 
 .site-nav { display: flex; align-items: center; gap: .15rem; }
@@ -323,7 +323,7 @@
 }
 
 @media (max-width: 600px) {
-  .brand-text { display: none; }
+  .brand-text { font-size: .9rem; overflow: hidden; text-overflow: ellipsis; }
   .site-nav-link { padding: .4rem .5rem; font-size: .88rem; }
 }
 

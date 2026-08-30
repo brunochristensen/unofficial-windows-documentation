@@ -348,14 +348,14 @@ Now the interesting part.
 
 <summary>Sources:</summary>
 
-learn.microsoft.com/en-us/troubleshoot/windows-server/system-management-components/what-is-microsoft-management-console
+[learn.microsoft.com/en-us/troubleshoot/windows-server/system-management-components/what-is-microsoft-management-console](https://learn.microsoft.com/en-us/troubleshoot/windows-server/system-management-components/what-is-microsoft-management-console)
 
-learn.microsoft.com/en-us/previous-versions/windows/desktop/mmc/mmc-3.0/ms692759(v=vs.85)
+[learn.microsoft.com/en-us/previous-versions/windows/desktop/mmc/mmc-3.0/ms692759(v=vs.85)](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/mmc/mmc-3.0/ms692759(v=vs.85))
 
-learn.microsoft.com/en-us/previous-versions/windows/desktop/mmc/reference/ms698449(v=vs.85)
+[learn.microsoft.com/en-us/previous-versions/windows/desktop/mmc/reference/ms698449(v=vs.85)](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/mmc/reference/ms698449(v=vs.85))
 
-github.com/ZERODETECTION/MSC\_Dropper
+[github.com/ZERODETECTION/MSC_Dropper](https://github.com/ZERODETECTION/MSC_Dropper)
 
-elastic.co/security-labs/grimresource
+[elastic.co/security-labs/grimresource](https://www.elastic.co/security-labs/grimresource)
 
 </details>

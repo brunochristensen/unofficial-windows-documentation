@@ -29,11 +29,19 @@ collections:
   docs:
     output: true
     permalink: /docs/:path/
+  writeups:
+    output: true
+    permalink: /write-ups/:path/
 
 defaults:
   - scope:
       path: ""
       type: docs
+    values:
+      layout: doc
+  - scope:
+      path: ""
+      type: writeups
     values:
       layout: doc
   - scope:
