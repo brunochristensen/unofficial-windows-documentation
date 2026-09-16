@@ -4,12 +4,25 @@ layout: default
 <div class="doc-shell">
 
   {%- comment -%}
-    Left sidebar. Navigation is on hold, so for now this auto-lists the current
-    collection alphabetically. Swap this block for a real nav later.
+    Left sidebar. General collection pages are listed alphabetically; grouped
+    pages use their explicit navigation order.
   {%- endcomment -%}
-  {%- if page.collection == "writeups" -%}
-    {%- assign siblings = site.writeups -%}
-    {%- assign sidebar_heading = "Write-ups" -%}
+  {%- if page.collection == "tools" -%}
+    {%- if page.tool_section -%}
+      {%- assign siblings = site.tools | where: "tool_section", page.tool_section -%}
+      {%- assign sidebar_heading = page.tool_section_title -%}
+    {%- else -%}
+      {%- assign siblings = site.tools -%}
+      {%- assign sidebar_heading = "Tools & Resources" -%}
+    {%- endif -%}
+  {%- elsif page.collection == "writeups" -%}
+    {%- if page.course_id -%}
+      {%- assign siblings = site.writeups | where: "course_id", page.course_id -%}
+      {%- assign sidebar_heading = page.course_title -%}
+    {%- else -%}
+      {%- assign siblings = site.writeups -%}
+      {%- assign sidebar_heading = "Write-ups" -%}
+    {%- endif -%}
   {%- else -%}
     {%- assign siblings = site.docs -%}
     {%- assign sidebar_heading = "Documentation" -%}
@@ -18,12 +31,22 @@ layout: default
     <nav class="sidebar-nav">
       <p class="sidebar-heading">{{ sidebar_heading }}</p>
       <ul class="nav-list">
-        {%- assign docs = siblings | sort: "title" -%}
+        {%- if page.course_id or page.tool_section -%}
+          {%- assign docs = siblings | sort: "nav_order" -%}
+        {%- else -%}
+          {%- assign docs = siblings | sort: "title" -%}
+        {%- endif -%}
         {%- for d in docs -%}
-          <li>
-            <a class="nav-link{% if d.url == page.url %} is-active{% endif %}"
-               href="{{ d.url | relative_url }}">{{ d.title }}</a>
-          </li>
+          {%- assign hide_nav_item = false -%}
+          {%- if page.collection == "writeups" and page.course_id == nil and d.writeup_parent -%}
+            {%- assign hide_nav_item = true -%}
+          {%- endif -%}
+          {%- unless hide_nav_item -%}
+            <li>
+              <a class="nav-link{% if d.url == page.url %} is-active{% endif %}"
+                 href="{{ d.url | relative_url }}">{{ d.title }}</a>
+            </li>
+          {%- endunless -%}
         {%- endfor -%}
       </ul>
     </nav>

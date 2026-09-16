@@ -1,6 +1,7 @@
 ---
 title: "Services"
 description: "How Windows services, services.msc, and the MMC console fit together."
+permalink: /docs/Services/
 ---
 
 The four jobs of an operating system are process, memory, file and I/O management. Services exist as background processes to facilitate more advanced functionality pertaining to these four jobs. Services will implement behavior for functionality like networking, handling API interactions, hosting third-party components and software, etc. Windows will start these processes as a part of its normal start-up routine, and they exist outside of a user's account context, instead running under a service account (LocalSystem, LocalService, NetworkService, or a named third-party account). This means they don't require a user to start them, and often execute with privileged access to the operating system.
@@ -272,9 +273,9 @@ SC * ScDecodeBinary(SC *pscRet,longlong *pstrBase64Text,undefined8 *pXmlBinaryOu
 
 Most of the data in `<BinaryStorage>` is icons for the management console. Additionally, there is state data about the console itself. Below is a sample of two of the icons. The other 4 image icons are duplicates of varying sizes and in different states, like the file icon being propped open. 
 
-![00_CONSOLE_FILE_ICON_LARGE](/assets/images/services/management/00_CONSOLE_FILE_ICON_LARGE.bmp)
+![Large console file icon](/assets/images/services/management/00-console-file-icon-large.bmp)
 
-![05_imagelist](/assets/images/services/management/05_imagelist.bmp)
+![Console image list](/assets/images/services/management/05-imagelist.bmp)
 
 Indices 4 and 7 in `<BinaryStorage>` are state data:
 

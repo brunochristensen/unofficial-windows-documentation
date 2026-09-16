@@ -1,10 +1,10 @@
 # Site settings — Unofficial Windows Documentation
 # _config.yml NOT hot-reloaded. Restart w/ `jekyll serve` after edits.
 
-title: Unofficial Windows Documentation
-tagline: A reference guide for what is and isn't normal.
+title: Bruno Christensen's blog thing
+tagline: The home of Unofficial Windows Documentation and more.
 description: >-
-  A collection of guides, references, and write-ups for Windows.
+  A collection of guides, references, and write-ups.
 author: Bruno Christensen
 email: brunojchris@gmail.com
 
@@ -29,6 +29,9 @@ collections:
   docs:
     output: true
     permalink: /docs/:path/
+  tools:
+    output: true
+    permalink: /tools/:path/
   writeups:
     output: true
     permalink: /write-ups/:path/
@@ -37,6 +40,11 @@ defaults:
   - scope:
       path: ""
       type: docs
+    values:
+      layout: doc
+  - scope:
+      path: ""
+      type: tools
     values:
       layout: doc
   - scope:
@@ -55,6 +63,7 @@ sass:
   sass_dir: _sass
 
 exclude:
+  - docs
   - Gemfile
   - Gemfile.lock
   - README.md

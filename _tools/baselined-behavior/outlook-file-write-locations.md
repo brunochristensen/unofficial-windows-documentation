@@ -1,3 +1,12 @@
+---
+title: "Microsoft Outlook File Write Locations"
+description: "Baselined executable and file-write locations observed for Microsoft Outlook."
+tool_section: baselined-behavior
+tool_section_title: "Baselined Behavior"
+nav_order: 3
+permalink: /tools/baselined-behavior/outlook-file-write-locations/
+---
+
 This is some baselined behavior for Outlook and Outlook Classic. There are some oddities included, 
 like duplicate Microsoft Office installations, as well as AMD, NVIDIA, and Intel drivers, and some office integrations.
 These are system dependent and will vary between hosts. Known executable locations are not exhaustive. This information was collected in a live environment.

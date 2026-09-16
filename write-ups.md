@@ -4,12 +4,13 @@ title: "Write-ups"
 permalink: /write-ups/
 ---
 
-Longer-form investigations — digging into a piece of Windows behavior until it
-either makes sense or turns out to be benign.
+Longer-form investigations, notes, and reviews.
 
 ## Recent
 
 {% assign writeups = site.writeups | sort: "title" %}
 {% for w in writeups %}
+{% unless w.writeup_parent %}
 - [{{ w.title }}]({{ w.url | relative_url }}){% if w.description %} — {{ w.description }}{% endif %}
+{% endunless %}
 {% endfor %}
