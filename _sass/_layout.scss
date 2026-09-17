@@ -41,7 +41,6 @@
 }
 .site-nav-link:hover { background: var(--bg-subtle); color: var(--text); text-decoration: none; }
 .site-nav-link.is-active { color: var(--text); font-weight: 600; }
-.nav-label-short { display: none; }
 
 .header-search {
   position: relative;
@@ -340,8 +339,6 @@
 @media (max-width: 600px) {
   .brand-text { font-size: .9rem; overflow: hidden; text-overflow: ellipsis; }
   .site-nav-link { padding: .4rem .5rem; font-size: .88rem; }
-  .nav-label-full { display: none; }
-  .nav-label-short { display: inline; }
   .hero-inner { padding: 3.75rem 1.25rem 3.25rem; }
   .cards-section { padding: 2.75rem 1.25rem 4rem; }
   .home-card-grid { grid-template-columns: minmax(0, 1fr); }
