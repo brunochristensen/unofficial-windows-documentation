@@ -1,10 +1,11 @@
 # Site settings — Unofficial Windows Documentation
 # _config.yml NOT hot-reloaded. Restart w/ `jekyll serve` after edits.
 
-title: Bruno Christensen's blog thing
-tagline: The home of Unofficial Windows Documentation and more.
+title: "Bruno Christensen | Security Notes"
+tagline: Windows documentation, security write-ups, and practical technical references.
 description: >-
-  A collection of guides, references, and write-ups.
+  Unofficial Windows documentation, security write-ups, practical tools, and
+  technical notes by Bruno Christensen.
 author: Bruno Christensen
 email: brunojchris@gmail.com
 
@@ -28,7 +29,7 @@ plugins:
 collections:
   docs:
     output: true
-    permalink: /docs/:path/
+    permalink: /windows-documentation/:path/
   tools:
     output: true
     permalink: /tools/:path/

@@ -1,7 +1,7 @@
 ---
 title: "Services"
 description: "How Windows services, services.msc, and the MMC console fit together."
-permalink: /docs/Services/
+permalink: /windows-documentation/windows-services/
 ---
 
 The four jobs of an operating system are process, memory, file and I/O management. Services exist as background processes to facilitate more advanced functionality pertaining to these four jobs. Services will implement behavior for functionality like networking, handling API interactions, hosting third-party components and software, etc. Windows will start these processes as a part of its normal start-up routine, and they exist outside of a user's account context, instead running under a service account (LocalSystem, LocalService, NetworkService, or a named third-party account). This means they don't require a user to start them, and often execute with privileged access to the operating system.

@@ -41,6 +41,7 @@
 }
 .site-nav-link:hover { background: var(--bg-subtle); color: var(--text); text-decoration: none; }
 .site-nav-link.is-active { color: var(--text); font-weight: 600; }
+.nav-label-short { display: none; }
 
 .header-search {
   position: relative;
@@ -229,12 +230,15 @@
 .btn-ghost:hover { background: var(--bg-subtle); }
 
 .cards-section { max-width: 1000px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
-.section-title { font-size: 1.4rem; margin: 0 0 1.5rem; }
+.section-heading { margin-bottom: 1.5rem; }
+.section-title { font-size: 1.4rem; margin: 0; }
+.section-intro { margin: .35rem 0 0; color: var(--text-muted); }
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1rem;
 }
+.home-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .card {
   display: block;
   padding: 1.25rem;
@@ -250,9 +254,20 @@
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
+.home-card { display: flex; min-height: 220px; flex-direction: column; padding: 1.5rem; }
+.card-label {
+  margin-bottom: .65rem;
+  color: var(--accent);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
 .card-title { margin: 0 0 .35rem; font-size: 1.1rem; }
 .card-desc { margin: 0 0 .75rem; color: var(--text-muted); font-size: .92rem; }
 .card-more { color: var(--accent); font-size: .88rem; font-weight: 600; }
+.home-card .card-title { font-size: 1.25rem; }
+.home-card .card-more { margin-top: auto; padding-top: .75rem; }
 
 // ---------------------------------------------------------------------------
 // Footer
@@ -325,6 +340,12 @@
 @media (max-width: 600px) {
   .brand-text { font-size: .9rem; overflow: hidden; text-overflow: ellipsis; }
   .site-nav-link { padding: .4rem .5rem; font-size: .88rem; }
+  .nav-label-full { display: none; }
+  .nav-label-short { display: inline; }
+  .hero-inner { padding: 3.75rem 1.25rem 3.25rem; }
+  .cards-section { padding: 2.75rem 1.25rem 4rem; }
+  .home-card-grid { grid-template-columns: minmax(0, 1fr); }
+  .home-card { min-height: 0; }
 }
 
 @media (max-width: 400px) {

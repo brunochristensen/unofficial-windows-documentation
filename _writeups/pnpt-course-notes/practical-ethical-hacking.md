@@ -1,6 +1,6 @@
 ---
 title: "Practical Ethical Hacking"
-description: "Course notes for Practical Ethical Hacking, organized by section."
+description: "Course notes for Practical Ethical Hacking, organized by section. Introductory and lab configuration sections omitted for brevity"
 writeup_parent: pnpt-course-notes
 course_id: practical-ethical-hacking
 course_title: "Practical Ethical Hacking"
